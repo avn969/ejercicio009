@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using Datos;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Linq.Expressions;
-
+System.Collections.dll
 using System.Linq;
 using System.Collections;
 
@@ -84,6 +84,13 @@ namespace UTDatos
 
 
         }
+
+        Dictionary<string, string> usuarioYEdad = new Dictionary<string, string>();
+
+        usuarioYEdad.Add("Pepe", "2" );  
+        usuarioYEdad.Add("Jose", "38");  
+        usuarioYEdad.Add("Pedro", "12");  
+        usuarioYEdad.Add("Ana", "15");
     }
 }
 
