@@ -43,22 +43,48 @@ namespace UTDatos
 
             string todos = "";
             for (int i = 0; i < listaDeEjemplo.Count; i++)
-             {
+            {
                 string mensajes = listaDeEjemplo[i];
                 todos += mensajes;
-             }
+            }
 
             todos = "";
-            foreach(string mensajes in listaDeEjemplo)
+            foreach (string mensajes in listaDeEjemplo)
             {
                 todos += mensajes;
             }
 
-            IEnumerable <string>  primero = listaDeEjemplo.Select(x => x.Trim().j
+            string primero = listaDeEjemplo.Select(x => x.Trim()).Where(x => x.StartsWith("Mensaje")).First();
 
-        }  
-        
-}
+        }
+
+        [TestMethod]
+
+        public void TestSet()
+        {
+
+            HashSet<string> miConjunto = new HashSet<string>();
+            // Mala práctica miConjunto.EnsureCapacity(5)
+
+
+            string cadena1 = new string("Mensaje");
+            string cadena2 = new string("Mensaje");
+            miConjunto.Add(cadena1);
+
+            Assert.IsTrue(miConjunto.Contains(cadena2));
+
+            ISet<object> miConjunto2 = new HashSet<object>();
+
+            Raiz raiz1 = new Raiz();
+            Raiz raiz2 = new Raiz();
+
+            miConjunto2.Add(raiz1);
+
+            Assert.IsTrue(miConjunto2.Contains(raiz2));
+
+
+        }
+    }
 }
 
 
